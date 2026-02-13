@@ -2,7 +2,7 @@
 declare module 'yt-dlp-exec' {
     import { ExecaChildProcess, Options } from 'execa';
 
-    type YtFormat = {
+    export type YtFormat = {
         asr: number,
         filesize: number,
         format_id: string,
@@ -24,7 +24,7 @@ declare module 'yt-dlp-exec' {
         http_headers: unknown
     }
 
-    type YtThumbnail = {
+    export type YtThumbnail = {
         height: number,
         url: string,
         width: number,
@@ -32,7 +32,7 @@ declare module 'yt-dlp-exec' {
         id: string,
     }
 
-    type YtResponse = {
+    export type YtResponse = {
         id: string,
         title: string,
         formats: YtFormat[],
@@ -90,7 +90,7 @@ declare module 'yt-dlp-exec' {
         _filename: string
     }
 
-    type YtFlags = {
+    export type YtFlags = {
         help?: boolean,
         version?: boolean,
         update?: boolean,
